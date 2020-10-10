@@ -42,6 +42,7 @@ class Controller {
                 this._view.addMessage('Gasto adicionado na tabela!');
                 this._limpaFormulario();
             })
+            .then(() => this._view.closeContainer())
             .catch(erro => this._view.addMessage(erro))
    
 

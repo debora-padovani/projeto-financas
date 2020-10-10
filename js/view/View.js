@@ -50,4 +50,9 @@ class View {
                 }
             };
         }
+
+        closeContainer(){
+            $('.add-gasto-box').classList.remove('open');
+            $('.add-gasto-box').classList.add('fechado');
+        }
 }
