@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Teste filtro js</title>
+        <meta charset="utf-8">
+
+        <script>
+            var objetos = [
+            {firstName:"John", lastName:"Doe", age:46},
+            {firstName:"Jane", lastName:"Doe", age:31},
+            {firstName:"Juju", lastName:"Pandinha", age:3},
+            {firstName:"Dé", lastName:"Borinha", age:27},
+            {firstName:"John", lastName:"Doe", age:46},
+            {firstName:"Jane", lastName:"Doe", age:31},
+            {firstName:"Juju", lastName:"Pandinha", age:3},
+            {firstName:"Dé", lastName:"Borinha", age:27},
+            {firstName:"John", lastName:"Doe", age:46},
+            {firstName:"Jane", lastName:"Doe", age:31},
+            {firstName:"Juju", lastName:"Pandinha", age:3},
+            {firstName:"Dé", lastName:"Borinha", age:27}
+            ];
+
+            console.log(objetos);
+
+            var meuPanda = 'Juju';
+
+            var filtrado = objetos.filter(n => n.firstName == meuPanda);
+
+            console.log(filtrado);
+        </script>
+
+    </head>
+ 
+    <body>
+         Teste filtro JS
+    </body>
+</html>
+

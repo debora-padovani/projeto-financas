@@ -1,0 +1,252 @@
+/* ===== FONTES ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+}
+
+/* ===== GERAL ===== */
+
+
+body{
+    background: #333;
+    color: #fafafa;
+}
+
+/* ===== FILTROS TOPO ===== */
+
+form label{
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+form input, form select{
+    border-radius: .65rem;
+    border: none;
+    font-size: .8rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, .2);
+    color: #fafafa;
+    margin-left: 1rem;
+}
+
+form select option{
+    background: #000;
+}
+
+form select option:hover{
+    background: #333;
+}
+
+
+
+.botao-filtros{
+    background: #302335;
+    border: 2px solid #333;
+    color: #fff;
+    padding: .5rem 2rem;
+    margin-left: 2rem;
+    border-radius: .65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===== TABELA COM GASTOS ===== */
+
+
+table{
+    background: #292929;
+    border-radius: .4rem;
+}
+
+thead{
+    background: rgba(50, 50, 50, .3);
+}
+
+thead td{
+    font-size: 1rem;
+}
+
+td:last-child{
+    border-right: none;
+}
+
+td{
+    padding: .5rem;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+table .gasto-total-bx{
+    background: rgba(50, 50, 50, .3) !important;
+    color: #fafafa !important;
+}
+
+/* ===== BOXES INFORMATIVOS ===== */
+
+.linha-dois{
+    margin-top: 3rem;
+}
+
+.gasto-total-bx{
+    background: #302335;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: .65rem;
+    color: #fff;
+}
+
+.aviso-bx{
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: .65rem;
+    background: #302335;
+    margin-top: 2rem;
+}
+
+.dentro-limite{
+    color: #c0ff50;
+}
+
+/* ===== BARRAS DE GASTOS ===== */
+
+.grafico-bx{
+    background: #292929;
+    padding: 2rem;
+    border-radius: .65rem;
+}
+
+.barra {
+    font-size: .8rem;
+    font-weight: 500;
+    border-radius: .45rem;
+}
+
+.barra-fill{
+    padding: 0;
+    border-radius: .45rem;
+    padding: .5rem;
+    background: rgba(0, 0, 0, .4);
+}
+
+.categ-comida{
+    background: #380275;
+}
+
+.categ-cinema{
+    background: #3E0461;
+}
+
+.categ-roupa{
+    background: #350694;
+}
+
+.categ-farmacia{
+    background: #2E3D75;
+}
+.categ-shows{
+    background: #211F63;
+}
+
+.categ-supermercado{
+    background: #002F9D;
+}
+
+.categ-outros{
+    background: #0C2F38;
+}
+
+/* ===== JANELA DE ADIÇÃO DE GASTOS ===== */
+
+
+.add-gasto-box{
+    background: #302335;
+    padding: 2rem 2rem 2rem 5rem;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0%;
+    border-radius: 0 .65rem .65rem 0;
+    display:block;
+    transform: translate(-100%, 0);
+}
+
+.add-gasto-box.fechado{
+    transform: translate(-100%, 0);
+    transition: ease-out 2s;
+}
+
+.add-gasto-box.open{
+    transform: translate(0, 0);
+    transition: ease-out 2s;
+}
+
+.add-gasto-btn{
+    background: #302335;
+    position: absolute;
+    left: 100%;
+    width: 3rem;
+    height: 4rem;
+    color: #fff;
+    border-radius: 0rem .65rem .65rem 0rem;
+    font-size: 2.5rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.add-gasto-box h3{
+    font-size: 1rem;
+}
+
+.gasto-input label{
+    display: block;
+    margin-top: 1.5rem;
+}
+
+.gasto-input input, .gasto-input textarea, .gasto-input select{
+    border: none;
+    background: rgba(0, 0, 0, .2);
+    padding: .6rem;
+    border-radius: .5rem;
+    color: #fafafa;
+}
+
+.add-gasto-box button{
+    margin-top: 2rem;
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: .6rem 1rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: .3rem;
+}
+
+#add-mensagem{
+    background: #9ee6ae;
+    padding: .5rem;
+    margin-bottom: 2rem;
+    border-radius: .65rem;
+    display: none;;
+}
+
+#add-mensagem p{
+    color: #1e7e34;
+    margin-bottom: 0;
+    padding-left: 2rem;
+}
+
+/* FOOTER */
+
+footer{
+    background: #111;
+    margin-top: 3rem;
+    padding: 1rem;
+}
+
+footer p{
+    font-size: 13px;
+    margin-bottom: 0;
+}

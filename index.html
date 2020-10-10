@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Projeto Tabela de Gastos</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/estilo.css">
+
+    </head>
+
+    <body>
+        <div class="container mt-5">
+            <div class="row justify-content-between mb-4">
+                
+                <div class="col-auto mb-3">
+
+                    <form>
+                        <label for="categorias">Selecione uma categoria para filtrar:</label>
+
+                        <select id="categorias">
+                          <option value="filtro-todas">Todas as categorias</option>
+                          <option value="filtro-comida">Comida</option>
+                          <option value="filtro-inema">Cinema</option>
+                          <option value="filtro-roupa">Roupa</option>
+                          <option value="filtro-farmacia">Farmácia</option>
+                          <option value="filtro-shows">Shows</option>
+                          <option value="filtro-supermercado">Supermercado</option>
+                          <option value="filtro-outros">Outros</option>
+                        </select>
+
+                        <button class="botao-filtros" id="filtro-categorias">Filtrar</button>
+                    </form>
+                     
+
+                </div>
+
+                <div class="col-auto mb-3">
+
+                    <form>
+                        <label for="gasto-max">Qual o valor máximo que eu quero gastar por mês?:</label>
+
+                        <input type="number" id="gasto-max" placeholder="R$ 1.600">
+                        <button class="botao-filtros" id="gasto-mes">Salvar</button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-12">
+
+                    <div id="add-mensagem"></div>
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <td>
+                                    Data
+                                </td>
+                                <td>
+                                    Valor
+                                </td>
+                                <td>
+                                    Descrição
+                                </td>
+                                <td>
+                                    Categoria
+                                </td>
+                            </tr>
+                        </thead>
+
+                        <tbody data-tabela="tabela">
+                            <tr>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    Ainda não adicionei nenhum gasto nessa tabela 
+                                </td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        </tbody>
+
+                        <tfoot>
+                            <tr  class="gasto-total-bx">
+                                <td colspan="2">
+                                    Gasto total:
+                                </td>
+                                <td data-gasto-total="tabela" colspan="2">
+                                     R$ 00
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <div class="row linha-dois">
+
+                <div class="col-12 col-lg-4">
+                    <div class="gasto-total-bx">
+                        <h4>Gasto total</h4>
+                        <span data-gasto-total="alerta">R$ 00</span>
+                    </div>
+
+                    <div class="aviso-bx dentro-limite">
+                        <h4>Oba! ainda podemos gastar</h4>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-lg-8 mt-3 mt-lg-0">
+                    <div class="grafico-bx">
+                        
+                        <div class="row my-2">
+                            <div class="col-8">
+                                <div class="barra categ-comida">
+                                    <div class ="barra-fill" data-barra-fill="comida">
+                                        Comida
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <p data-gasto-category="comida">R$250,00</p>
+                            </div>
+                        </div>
+
+                        <div class="row my-2">
+                            <div class="col-8">
+                                <div class="barra categ-cinema">
+                                    <div class="barra-fill" data-barra-fill="cinema">
+                                        Cinema
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <p data-gasto-category="cinema">R$100,00</p>
+                            </div>
+                        </div>
+
+                        <div class="row my-2">
+                            <div class="col-8">
+                                <div class="barra categ-roupa">
+                                    <div class="barra-fill" data-barra-fill="roupa">
+                                        Roupa
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <p data-gasto-category="roupa">R$75,00</p>
+                            </div>
+                        </div>
+
+                        <div class="row my-2">
+                            <div class="col-8">
+                                <div class="barra categ-farmacia">
+                                    <div class="barra-fill" data-barra-fill="farmacia">
+                                        Farmácia
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <p data-gasto-category="farmacia">R$100,00</p>
+                            </div>
+                        </div>
+
+                        <div class="row my-2">
+                            <div class="col-8">
+                                <div class="barra categ-shows">
+                                    <div class="barra-fill" data-barra-fill="shows">
+                                        Shows
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <p data-gasto-category="shows">R$0,00</p>
+                            </div>
+                        </div>
+
+                        <div class="row my-2">
+                            <div class="col-8">
+                                <div class="barra categ-supermercado">
+                                    <div class="barra-fill" data-barra-fill="supermercado">
+                                        Supermercado
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <p data-gasto-category="supermercado">R$100,00</p>
+                            </div>
+                        </div>
+
+                        <div class="row my-2">
+                            <div class="col-8">
+                                <div class="barra categ-outros">
+                                    <div class="barra-fill" data-barra-fill="outros">
+                                        Outros
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4"">
+                                <p data-gasto-category="outros">R$35,00</p>
+                            </div>
+                        </div>                        
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="add-gasto-box">
+                    <h3>Adicionar um novo gasto</h3>
+
+                    <div class="add-gasto-btn">
+                        +
+                    </div>
+    
+                    <form onsubmit="controller.adiciona(event)">
+                        
+                        <div class="gasto-input">
+                            <label>Data</label>
+                            <input type="date" data-form="data" required>
+                        </div>
+                        
+                        <div class="gasto-input">
+                            <label>Valor</label>
+                            <input type="number" data-form="valor" min="0.01" step="0.01"  required>
+                        </div>
+                         
+                        <div class="gasto-input">
+                            <label for="descricao">Descrição:</label>
+                            <textarea data-form="descricao" required></textarea>
+                        </div>
+                        
+                        <div class="gasto-input">
+                            <label for="categoria">Categoria:</label>
+                            <select data-form="categoria" required>
+                                <option value="padrao" disabled selected>- selecione -</option>
+                                <option value="comida">Comida</option>
+                                <option value="cinema">Cinema</option>
+                                <option value="roupa">Roupa</option>
+                                <option value="farmacia">Farmácia</option>
+                                <option value="shows">Shows</option>
+                                <option value="supermercado">Supermercado</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+
+                        <button type="submit">Adicionar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Débora Cabral Padovani - Projeto em Desenvolvimento - Lista de Finanças</p>
+        </footer>
+        
+      <script src="js/controllers/Controller.js"></script>
+      <script src="js/models/GastoNovo.js"></script>
+      <script src="js/models/ListaGastos.js"></script>
+      <script src="js/services/ConnectionFactory.js"></script>
+      <script src="js/services/GastosService.js"></script>
+      <script src="js/dao/GastosDao.js"></script>
+      <script src="js/view/View.js"></script>
+      <script src="js/view/ViewUpdate.js"></script>
+
+
+      <script>
+        let controller = new Controller();
+     </script>
+     
+    </body>
+</html>
+
