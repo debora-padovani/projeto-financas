@@ -33,6 +33,8 @@ class View {
             campoMensagem.innerHTML = `<p>${mensagem}</p>`;
 
             campoMensagem.style.display = "block";
+
+            setTimeout(() => campoMensagem.style.display = "none", 7000);
             
         }
 
