@@ -9,7 +9,7 @@ class View {
             return`
             ${model.map(n => 
                 `
-                <tr class="categ-${n.categoria}">
+                <tr class="categ-${n.categoria}" data-category data-${n.categoria}>
                     <td>
                         ${n.data}
                     </td>
@@ -25,6 +25,13 @@ class View {
                 </tr>
                 `).join('')}`;   
         }
+        
+        /*filterView (category) {
+
+
+
+        }*/
+
 
         addMessage (mensagem) {
             

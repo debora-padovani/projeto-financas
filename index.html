@@ -19,18 +19,18 @@
                     <form>
                         <label for="categorias">Selecione uma categoria para filtrar:</label>
 
-                        <select id="categorias">
-                          <option value="filtro-todas">Todas as categorias</option>
-                          <option value="filtro-comida">Comida</option>
-                          <option value="filtro-inema">Cinema</option>
-                          <option value="filtro-roupa">Roupa</option>
-                          <option value="filtro-farmacia">Farmácia</option>
-                          <option value="filtro-shows">Shows</option>
-                          <option value="filtro-supermercado">Supermercado</option>
-                          <option value="filtro-outros">Outros</option>
+                        <select id="categorias" data-filtro="categorias">
+                          <option value="category">Todas as categorias</option>
+                          <option value="comida">Comida</option>
+                          <option value="cinema">Cinema</option>
+                          <option value="roupa">Roupa</option>
+                          <option value="farmacia">Farmácia</option>
+                          <option value="shows">Shows</option>
+                          <option value="supermercado">Supermercado</option>
+                          <option value="outros">Outros</option>
                         </select>
 
-                        <button class="botao-filtros" id="filtro-categorias">Filtrar</button>
+                        <button class="botao-filtros" id="filtro-categorias" onclick="controller.filtraCategoria(event)">Filtrar</button>
                     </form>
                      
 

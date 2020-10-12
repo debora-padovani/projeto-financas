@@ -9,11 +9,14 @@ class Controller {
         this._inputDescricao = $('[data-form="descricao"]');
         this._inputCategoria = $('[data-form="categoria"]'); 
 
+        this._inputFiltroCategoria = $('[data-filtro="categorias"]')
+
         this._listaDeGastos = new ListaGastos(); 
         
         this._service = new GastosService();
 
         this._view = new View();
+
         this._view.openAddContainer();
 
         this._viewUpdate = new ViewUpdate();
@@ -52,6 +55,24 @@ class Controller {
        
         this._viewUpdate.updateList (); 
 
+
+    }
+
+    filtraCategoria(event){
+        event.preventDefault();
+
+        let category = this._inputFiltroCategoria.value;
+
+        let itensDaLista = document.querySelectorAll('[data-category]');
+        itensDaLista.forEach(item => {
+            if(item.hasAttribute(`data-${category}`)){
+            item.classList.remove('d-none');
+            console.log(`${item}: Item selecionado`);
+            } else {
+            item.classList.add('d-none');
+            console.log(`${item}: Item escondido`);
+            }
+        });
 
     }
 
