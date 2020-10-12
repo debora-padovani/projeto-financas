@@ -41,8 +41,8 @@
                     <form>
                         <label for="gasto-max">Qual o valor máximo que eu quero gastar por mês?:</label>
 
-                        <input type="number" id="gasto-max" placeholder="R$ 1.600">
-                        <button class="botao-filtros" id="gasto-mes">Salvar</button>
+                        <input type="number" id="gasto-max" data-filtro="gasto" placeholder="R$ 1.600">
+                        <button class="botao-filtros" id="gasto-mes" onclick="controller.alertaGastos(event)">Salvar</button>
 
                     </form>
 
@@ -113,7 +113,7 @@
                         <span data-gasto-total="alerta">R$ 00</span>
                     </div>
 
-                    <div class="aviso-bx dentro-limite">
+                    <div class="aviso-bx dentro-limite"  data-msg="gasto">
                         <h4>Oba! ainda podemos gastar</h4>
                     </div>
 

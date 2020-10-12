@@ -76,6 +76,13 @@ class Controller {
 
     }
 
+    alertaGastos(event){
+        event.preventDefault();
+
+        this._viewUpdate.verificaGasto();
+
+    }
+
     _criaGasto () {
        
         return new GastoNovo(

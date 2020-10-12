@@ -108,6 +108,9 @@ table .gasto-total-bx{
 .dentro-limite{
     color: #c0ff50;
 }
+.fora-limite{
+    color: #ac0e0e;
+}
 
 /* ===== BARRAS DE GASTOS ===== */
 

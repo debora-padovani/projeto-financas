@@ -46,4 +46,27 @@ class ViewUpdate {
 
     }
 
+    verificaGasto(){
+
+        let gasto = document.querySelector('[data-filtro="gasto"]').value;
+
+        console.log(`Gasto total: ${this._listaDeGastos.gastoTotal}`);
+        console.log(`Gasto a filtrar: ${gasto}`);
+
+
+        if(this._listaDeGastos.gastoTotal > gasto){
+            $("[data-msg]").classList.remove('dentro-limite');
+            $("[data-msg]").classList.add('fora-limite');
+            $("[data-msg]").innerHTML = ('<h4>Cuidado! já gastamos demais</h4>');
+            console.log("Gasto excessivo");
+
+        } else {
+            $("[data-msg]").classList.remove('fora-limite');
+            $("[data-msg]").classList.add('dentro-limite');
+            $("[data-msg]").innerHTML = ('<h4>Oba! Ainda podemos gastar</h4>');
+            console.log("Gasto dentro do limite");
+
+        }
+    }
+
 }
