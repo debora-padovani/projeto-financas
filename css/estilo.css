@@ -215,7 +215,6 @@ tr.categ-outros{
 
 tr.categ-comida, tr.categ-cinema, tr.categ-roupa, tr.categ-farmacia, tr.categ-shows, tr.categ-supermercado, .categ-outros{
     border-bottom: 1px solid #333;
-    background: #9242b;
 }
 
 /* ===== JANELA DE ADIÇÃO DE GASTOS ===== */
