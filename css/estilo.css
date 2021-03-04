@@ -6,6 +6,8 @@
     font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 }
 
+
+
 /* ===== GERAL ===== */
 
 
@@ -311,8 +313,21 @@ footer p{
     margin-bottom: 0;
 }
 
-@media(max-width: 530px){
-    body{
-        font-size: .8rem;
+/* MEDIA QUERIES */
+
+@media (max-width:767px){
+    .add-gasto-box {
+        padding: 2rem;
+        max-width: 82%;
+    }
+    .container{
+        max-width: unset;
+        width: 95%;
+    }
+    .add-gasto-box button {
+        padding: .6rem 2rem;
+    }
+    form input, form select {
+        max-width: 50%;
     }
 }
