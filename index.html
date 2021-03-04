@@ -14,7 +14,7 @@
         <div class="container mt-5">
             <div class="row justify-content-between mb-4">
                 
-                <div class="col-auto mb-3">
+                <div class="col-12 col-md-6 mb-3 text-center text-md-left">
 
                     <form>
                         <label for="categorias">Selecione uma categoria para filtrar:</label>
@@ -36,7 +36,7 @@
 
                 </div>
 
-                <div class="col-auto mb-3">
+                <div class="col-12 col-md-6 mb-3 text-center text-md-right">
 
                     <form>
                         <label for="gasto-max">Qual o valor máximo que eu quero gastar por mês?:</label>
@@ -107,7 +107,7 @@
 
             <div class="row linha-dois">
 
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-lg-5">
                     <div class="gasto-total-bx">
                         <h4>Gasto total</h4>
                         <span data-gasto-total="alerta">R$ 00</span>
@@ -119,97 +119,101 @@
 
                 </div>
 
-                <div class="col-12 col-lg-8 mt-3 mt-lg-0">
+                <div class="col-12 col-lg-7 mt-3 mt-lg-0">
                     <div class="grafico-bx">
                         
-                        <div class="row my-2">
-                            <div class="col-8">
+                        <div class="row my-3">
+                            <div class="col-12">
+
+                                <div class="barra-info d-flex justify-content-between">
+                                    <span>Comida</span>
+                                    <p class="mb-1" data-gasto-category="comida"></p>
+                                </div>
+                                
                                 <div class="barra categ-comida">
                                     <div class ="barra-fill" data-barra-fill="comida">
-                                        Comida
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4">
-                                <p data-gasto-category="comida">R$250,00</p>
-                            </div>
                         </div>
 
-                        <div class="row my-2">
-                            <div class="col-8">
+                        <div class="row my-3">
+                            <div class="col-12">
+                                <div class="barra-info d-flex justify-content-between">
+                                    <span>Cinema</span>
+                                    <p class="mb-1" data-gasto-category="cinema"></p>
+                                </div>
                                 <div class="barra categ-cinema">
                                     <div class="barra-fill" data-barra-fill="cinema">
-                                        Cinema
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4">
-                                <p data-gasto-category="cinema">R$100,00</p>
-                            </div>
+        
                         </div>
 
-                        <div class="row my-2">
-                            <div class="col-8">
+                        <div class="row my-3">
+                            <div class="col-12">
+                                <div class="barra-info d-flex justify-content-between">
+                                    <span>Roupa</span>
+                                    <p class="mb-1" data-gasto-category="roupa"></p>
+                                </div>
+                                
                                 <div class="barra categ-roupa">
                                     <div class="barra-fill" data-barra-fill="roupa">
-                                        Roupa
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4">
-                                <p data-gasto-category="roupa">R$75,00</p>
-                            </div>
                         </div>
 
-                        <div class="row my-2">
-                            <div class="col-8">
+                        <div class="row my-3">
+                            <div class="col-12">
+                                <div class="barra-info d-flex justify-content-between">
+                                    <span>Farmácia</span>
+                                    <p class="mb-1" data-gasto-category="farmacia"></p>
+                                </div>
                                 <div class="barra categ-farmacia">
                                     <div class="barra-fill" data-barra-fill="farmacia">
-                                        Farmácia
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4">
-                                <p data-gasto-category="farmacia">R$100,00</p>
-                            </div>
                         </div>
 
-                        <div class="row my-2">
-                            <div class="col-8">
+                        <div class="row my-3">
+                            <div class="col-12">
+                                <div class="barra-info d-flex justify-content-between">
+                                    <span>Shows</span>
+                                    <p class="mb-1" data-gasto-category="shows"></p>
+                                </div>
                                 <div class="barra categ-shows">
                                     <div class="barra-fill" data-barra-fill="shows">
-                                        Shows
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-4">
-                                <p data-gasto-category="shows">R$0,00</p>
-                            </div>
                         </div>
 
-                        <div class="row my-2">
-                            <div class="col-8">
+                        <div class="row my-3">
+                            <div class="col-12">
+                                <div class="barra-info d-flex justify-content-between">
+                                    <span>Supermercado</span>
+                                    <p class="mb-1" data-gasto-category="supermercado"></p>
+                                </div>
                                 <div class="barra categ-supermercado">
                                     <div class="barra-fill" data-barra-fill="supermercado">
-                                        Supermercado
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-4">
-                                <p data-gasto-category="supermercado">R$100,00</p>
                             </div>
                         </div>
 
-                        <div class="row my-2">
-                            <div class="col-8">
+                        <div class="row my-3">
+                            <div class="col-12">
+                                <div class="barra-info d-flex justify-content-between">
+                                    <span>Outros</span>
+                                    <p class="mb-1" data-gasto-category="outros"></p>
+                                </div>
                                 <div class="barra categ-outros">
                                     <div class="barra-fill" data-barra-fill="outros">
-                                        Outros
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-4"">
-                                <p data-gasto-category="outros">R$35,00</p>
                             </div>
                         </div>                        
                         

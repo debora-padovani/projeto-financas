@@ -14,25 +14,29 @@ body{
     color: #fafafa;
 }
 
+h4{
+    margin-bottom: 0;
+}
+
 /* ===== FILTROS TOPO ===== */
 
 form label{
     font-size: .8rem;
     font-weight: 500;
+    width: 100%;
 }
 
 form input, form select{
     border-radius: .65rem;
     border: none;
     font-size: .8rem;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     background: rgba(0, 0, 0, .2);
     color: #fafafa;
-    margin-left: 1rem;
 }
 
 form select option{
-    background: #000;
+    background: #2d2a2e;
 }
 
 form select option:hover{
@@ -45,23 +49,30 @@ form select option:hover{
     background: #302335;
     border: 2px solid #333;
     color: #fff;
-    padding: .5rem 2rem;
-    margin-left: 2rem;
+    padding: .5rem 1rem;
+    margin-left: 1rem;
     border-radius: .65rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-size: .8rem;
 }
 
 /* ===== TABELA COM GASTOS ===== */
 
 
 table{
-    background: #292929;
+    background: #2b262d;
     border-radius: .4rem;
+    width: 100%;
 }
 
 thead{
     background: rgba(50, 50, 50, .3);
+    border-left: 5px solid #2b262d;
+}
+
+tfoot{
+    border-left: 5px solid #2b262d;
 }
 
 thead td{
@@ -89,20 +100,32 @@ table .gasto-total-bx{
     margin-top: 3rem;
 }
 
+
 .gasto-total-bx{
-    background: #302335;
+    background: #2b262d;
     padding: 3rem 2rem;
     text-align: center;
     border-radius: .65rem;
     color: #fff;
 }
 
+.gasto-total-bx:not(tr){
+    height: 48%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
 .aviso-bx{
     padding: 3rem 2rem;
     text-align: center;
     border-radius: .65rem;
-    background: #302335;
-    margin-top: 2rem;
+    background: #2b262d;
+    margin-top: 4%;
+    height: 48%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
 
 .dentro-limite{
@@ -115,7 +138,7 @@ table .gasto-total-bx{
 /* ===== BARRAS DE GASTOS ===== */
 
 .grafico-bx{
-    background: #292929;
+    background: #2b262d;
     padding: 2rem;
     border-radius: .65rem;
 }
@@ -124,47 +147,82 @@ table .gasto-total-bx{
     font-size: .8rem;
     font-weight: 500;
     border-radius: .45rem;
+    background: #2d2a2e;
 }
 
 .barra-fill{
     padding: 0;
     border-radius: .45rem;
-    padding: .5rem;
+    height: 5px;
     background: rgba(0, 0, 0, .4);
 }
 
-.categ-comida{
-    background: #380275;
+tr.categ-comida{
+    border-left: 5px solid #61E8E1;
 }
 
-.categ-cinema{
-    background: #3E0461;
+.categ-comida .barra-fill{
+    background: #61E8E1;
 }
 
-.categ-roupa{
-    background: #350694;
+tr.categ-cinema{
+    border-left: 5px solid #037971;
 }
 
-.categ-farmacia{
-    background: #2E3D75;
-}
-.categ-shows{
-    background: #211F63;
+.categ-cinema .barra-fill{
+    background: #037971;
 }
 
-.categ-supermercado{
-    background: #002F9D;
+tr.categ-roupa{
+    border-left: 5px solid #2191FB;
 }
 
-.categ-outros{
-    background: #0C2F38;
+.categ-roupa .barra-fill{
+    background: #2191FB;
+}
+
+tr.categ-farmacia{
+    border-left: 5px solid#440381;
+}
+
+.categ-farmacia .barra-fill{
+    background: #440381;
+}
+
+tr.categ-shows{
+    border-left: 5px solid #2E86AB;
+}
+
+.categ-shows .barra-fill{
+    background: #2E86AB;
+}
+
+tr.categ-supermercado{
+    border-left: 5px solid #090C9B;
+}
+
+.categ-supermercado .barra-fill{
+    background: #090C9B;
+}
+
+tr.categ-outros{
+    border-left: 5px solid #5F5E82;
+}
+
+.categ-outros .barra-fill{
+    background: #5F5E82;
+}
+
+tr.categ-comida, tr.categ-cinema, tr.categ-roupa, tr.categ-farmacia, tr.categ-shows, tr.categ-supermercado, .categ-outros{
+    border-bottom: 1px solid #333;
+    background: #9242b;
 }
 
 /* ===== JANELA DE ADIÇÃO DE GASTOS ===== */
 
 
 .add-gasto-box{
-    background: #302335;
+    background: #2b262d;
     padding: 2rem 2rem 2rem 5rem;
     position: fixed;
     top: 0;
@@ -182,7 +240,7 @@ table .gasto-total-bx{
 
 .add-gasto-box.open{
     transform: translate(0, 0);
-    transition: ease-out 2s;
+    transition: ease 0.7s;
 }
 
 .add-gasto-btn{
@@ -209,7 +267,7 @@ table .gasto-total-bx{
 
 .gasto-input input, .gasto-input textarea, .gasto-input select{
     border: none;
-    background: rgba(0, 0, 0, .2);
+    background: rgb(45, 42, 46);
     padding: .6rem;
     border-radius: .5rem;
     color: #fafafa;
@@ -217,7 +275,7 @@ table .gasto-total-bx{
 
 .add-gasto-box button{
     margin-top: 2rem;
-    background: #111;
+    background: #333;
     color: #fff;
     border: none;
     padding: .6rem 1rem;
@@ -252,4 +310,10 @@ footer{
 footer p{
     font-size: 13px;
     margin-bottom: 0;
+}
+
+@media(max-width: 530px){
+    body{
+        font-size: .8rem;
+    }
 }
