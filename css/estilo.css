@@ -61,6 +61,33 @@ form select option:hover{
 
 /* ===== TABELA COM GASTOS ===== */
 
+.tabela-gastos{
+    background: #2b262d;
+    padding: 2rem;
+}
+
+.linha-gasto{
+    display: inline-flex;
+    border: 1px solid #322b33;
+    border-radius: .4rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background: #322b33;
+    overflow: hidden;
+}
+
+.box-icone{
+    padding: .3rem;
+}
+
+.box-icone img{
+    width: 2rem;
+}
+
+
 
 table{
     background: #2b262d;
@@ -159,64 +186,60 @@ table .gasto-total-bx{
     background: rgba(0, 0, 0, .4);
 }
 
-tr.categ-comida{
-    border-left: 5px solid #61E8E1;
+.categ-comida .box-icone{
+    background: #61E8E1;
 }
 
 .categ-comida .barra-fill{
     background: #61E8E1;
 }
 
-tr.categ-cinema{
-    border-left: 5px solid #037971;
+.categ-cinema .box-icone{
+    background: #037971;
 }
 
 .categ-cinema .barra-fill{
     background: #037971;
 }
 
-tr.categ-roupa{
-    border-left: 5px solid #2191FB;
+.categ-roupa .box-icone{
+    background: #2191FB;
 }
 
 .categ-roupa .barra-fill{
     background: #2191FB;
 }
 
-tr.categ-farmacia{
-    border-left: 5px solid#440381;
+.categ-farmacia .box-icone{
+    background: #440381;
 }
 
 .categ-farmacia .barra-fill{
     background: #440381;
 }
 
-tr.categ-shows{
-    border-left: 5px solid #2E86AB;
+.categ-shows .box-icone{
+    background: #2E86AB;
 }
 
 .categ-shows .barra-fill{
     background: #2E86AB;
 }
 
-tr.categ-supermercado{
-    border-left: 5px solid #090C9B;
+.categ-supermercado .box-icone{
+    background: #090C9B;
 }
 
 .categ-supermercado .barra-fill{
     background: #090C9B;
 }
 
-tr.categ-outros{
-    border-left: 5px solid #5F5E82;
+.categ-outros .box-icone{
+    background: #5F5E82;
 }
 
 .categ-outros .barra-fill{
     background: #5F5E82;
-}
-
-tr.categ-comida, tr.categ-cinema, tr.categ-roupa, tr.categ-farmacia, tr.categ-shows, tr.categ-supermercado, .categ-outros{
-    border-bottom: 1px solid #333;
 }
 
 /* ===== JANELA DE ADIÇÃO DE GASTOS ===== */

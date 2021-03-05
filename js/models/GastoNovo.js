@@ -11,7 +11,9 @@ class GastoNovo {
 	};
 
 	get data () {
-		return this._data;
+    const arrayData = this._data.split('-');
+    const dataFinal = `${arrayData[2]}/${arrayData[1]}/${arrayData[0]}`
+		return dataFinal;
 	}
 
 	get valor () {

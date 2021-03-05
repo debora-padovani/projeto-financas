@@ -9,20 +9,12 @@ class View {
             return`
             ${model.map(n => 
                 `
-                <tr class="categ-${n.categoria}" data-category data-${n.categoria}>
-                    <td>
-                        ${n.data}
-                    </td>
-                    <td>
-                        R$ ${n.valor}
-                    </td>
-                    <td>
-                        ${n.descricao} 
-                    </td>
-                    <td>
-                        ${n.categoria}
-                    </td>
-                </tr>
+                <div class="categ-${n.categoria} linha-gasto" data-category data-${n.categoria}>
+                    <div class="box-icone"><img src="/icons/${n.categoria}.svg"></div>
+                    <div>${n.data}</div>
+                    <div>R$ ${n.valor}</div>
+                    <div>${n.descricao}</div>
+                </div>
                 `).join('')}`;   
         }
         
